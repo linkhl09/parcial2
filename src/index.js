@@ -4,12 +4,12 @@ import './index.css';
 import App from './App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import {intlProvider} from 'react-intl';
+import {IntlProvider} from "react-intl";
 
 ReactDOM.render(
-  <intlProvider locale="en">
+  <IntlProvider locale="en">
     <App />
-  </intlProvider>,
+  </IntlProvider>,
   document.getElementById('root')
 );
 
