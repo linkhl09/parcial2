@@ -3,16 +3,7 @@ import * as d3 from "d3";
 
 class Graphic extends Component {
   componentDidMount() {
-    const data = [
-      { name: "Medellín", index2005: 3, index2006: 33 },
-      { name: "Cali", index2005: 39, index2006: 45 },
-      { name: "Bogotá", index2005: 7, index2006: 31 },
-      { name: "Pereira", index2005: 35, index2006: 36 },
-      { name: "Bucaramanga", index2005: 16, index2006: 23 },
-      { name: "Cúcuta", index2005: 45, index2006: 45 },
-      { name: "Armenia", index2005: 6, index2006: 16 },
-    ];
-    this.drawChart(data);
+    this.drawChart(this.props.pokemon);
   }
 
   drawChart(data) {
@@ -39,7 +30,7 @@ class Graphic extends Component {
         0,
         Math.max.apply(
           Math,
-          data.map((d) => d.index2005)
+          data.map((d) => d.height)
         ),
       ])
       .range([iheight, 0]);
@@ -58,8 +49,8 @@ class Graphic extends Component {
       .attr("class", "bar")
       .style("fill", "steelblue")
       .attr("x", (d) => x(d.name))
-      .attr("y", (d) => y(d.value))
-      .attr("height", (d) => iheight - y(d.value))
+      .attr("y", (d) => y(d.height))
+      .attr("height", (d) => iheight - y(d.height))
       .attr("width", (d) => x.bandwidth());
 
     // x axis
