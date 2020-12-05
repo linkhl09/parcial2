@@ -1,3 +1,7 @@
 {
-	
+	"Name": "Name",
+	"Description": "Description",
+	"Height": "Height",
+	"Weight": "Weight",
+	"Type": "Type"
 }

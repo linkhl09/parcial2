@@ -1,3 +1,7 @@
 {
-	
+	"Name": "Nombre",
+	"Description": "Descripción",
+	"Height": "Altura",
+	"Weight": "Peso",
+	"Type": "Tipo"
 }
