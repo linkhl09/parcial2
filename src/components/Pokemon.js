@@ -19,7 +19,7 @@ export default class Pokemon extends React.Component {
           {this.props.pokemon.type.map((x) => {
             return (
               <div>
-                <span class="badge badge-secondary">{x}</span>
+                <span className="badge badge-secondary">{x}</span>
                 <br />
               </div>
             );

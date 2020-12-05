@@ -29,9 +29,9 @@ function PokemonList() {
   }, []);
 
   return (
-    <div class="container">
+    <div className="container">
       <Table striped bordered hover>
-        <thead class="thead-dark">
+        <thead className="thead-dark">
           <th scope="col">#</th>
           <th scope="col">
             <FormattedMessage id="Image" />
@@ -52,13 +52,13 @@ function PokemonList() {
             <FormattedMessage id="Type" />
           </th>
         </thead>
-        <tbody class="tbody">
+        <tbody className="tbody">
           {pokemon.map( (e, i) => 
             <Pokemon key={i} pokemon={e} />
           )}
         </tbody>
       </Table>
-      <h1>Info</h1>
+      <h1><FormattedMessage id="Height"/></h1>
       <Graphic pokemon={pokemon} />
     </div>
   );
